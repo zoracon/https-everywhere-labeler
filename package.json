@@ -2,8 +2,9 @@
   "name": "@pipboy96/https-everywhere-labeler",
   "version": "0.1.0",
   "description": "A GitHub Action for labeling HTTPS Everywhere rulesets. This is not an official EFF package.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "ncc build",
     "lint": "standard",
     "test": "npm run lint"
   },
@@ -23,6 +24,14 @@
     "minimatch": "^3.0.4"
   },
   "devDependencies": {
-    "standard": "^14.3.1"
+    "@zeit/ncc": "^0.20.5",
+    "standard": "^14.3.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
   }
 }
