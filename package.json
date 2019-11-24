@@ -1,0 +1,19 @@
+{
+  "name": "@pipboy96/https-everywhere-labeler",
+  "version": "0.1.0",
+  "description": "A GitHub Action for labeling HTTPS Everywhere rulesets. This is not an official EFF package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipboy96/https-everywhere-labeler.git"
+  },
+  "author": "pipboy96",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pipboy96/https-everywhere-labeler/issues"
+  },
+  "homepage": "https://github.com/pipboy96/https-everywhere-labeler#readme"
+}
