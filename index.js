@@ -46,7 +46,7 @@ async function run () {
 
     const labels = []
 
-    if (fileList.each(file => file.status === 'added')) {
+    if (fileList.every(file => file.status === 'added')) {
       labels.push(labelNames.add)
     } else {
       labels.push(labelNames.modify)
