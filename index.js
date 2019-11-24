@@ -32,7 +32,7 @@ async function run () {
       return
     }
 
-    const prNumber = context.payload.pull_request
+    const prNumber = context.payload.pull_request.number
 
     const fileList = await client.pulls.listFiles({
       ...defaults,
