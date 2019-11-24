@@ -19,7 +19,8 @@
   "homepage": "https://github.com/pipboy96/https-everywhere-labeler#readme",
   "dependencies": {
     "@actions/core": "^1.2.0",
-    "@actions/github": "^1.1.0"
+    "@actions/github": "^1.1.0",
+    "minimatch": "^3.0.4"
   },
   "devDependencies": {
     "standard": "^14.3.1"
