@@ -39,7 +39,7 @@ async function run () {
       pull_number: prNumber
     })
 
-    if (!fileList.each(isRuleset)) {
+    if (!fileList.every(isRuleset)) {
       // Don't touch PRs that modify anything except rulesets for now
       return
     }
