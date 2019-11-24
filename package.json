@@ -1,6 +1,6 @@
 {
   "name": "@pipboy96/https-everywhere-labeler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A GitHub Action for labeling HTTPS Everywhere rulesets. This is not an official EFF package.",
   "main": "dist/index.js",
   "scripts": {
