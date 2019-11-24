@@ -34,10 +34,12 @@ async function run () {
 
     const prNumber = context.payload.pull_request.number
 
-    const fileList = await client.pulls.listFiles({
+    const response = await client.pulls.listFiles({
       ...defaults,
       pull_number: prNumber
     })
+
+    const fileList = response.data
 
     if (!fileList.every(isRuleset)) {
       // Don't touch PRs that modify anything except rulesets for now
