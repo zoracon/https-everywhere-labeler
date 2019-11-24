@@ -1,0 +1,9 @@
+name: 'HTTPS Everywhere PR labeler'
+description: 'Automatically label pull requests'
+author: 'pipboy96'
+inputs:
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+runs:
+  using: 'node12'
+  main: 'index.js'
