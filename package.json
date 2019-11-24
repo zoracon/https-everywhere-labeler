@@ -4,7 +4,8 @@
   "description": "A GitHub Action for labeling HTTPS Everywhere rulesets. This is not an official EFF package.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "@actions/core": "^1.2.0",
     "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }
