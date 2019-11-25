@@ -4,15 +4,11 @@ const core = require('@actions/core')
 const github = require('@actions/github')
 const minimatch = require('minimatch')
 
-const rulesetGlob = '/src/chrome/content/rules/*.xml'
+const rulesetGlob = new minimatch.Minimatch('/src/chrome/content/rules/*.xml')
 
 const labelNames = {
   add: 'new-ruleset',
   modify: 'ruleset-enhancement'
-}
-
-function isRuleset () {
-  return file => minimatch(file.name, rulesetGlob)
 }
 
 async function run () {
@@ -41,7 +37,7 @@ async function run () {
 
     const fileList = response.data
 
-    if (!fileList.every(isRuleset)) {
+    if (!fileList.every(file => rulesetGlob.match(file.name))) {
       // Don't touch PRs that modify anything except rulesets for now
       return
     }
